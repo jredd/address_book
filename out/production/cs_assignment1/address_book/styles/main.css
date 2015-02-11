@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'League Gothic';
+    src: url('../fonts/league_gothic.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/open_sans.ttf');
+}
+
+#label_full_name {
+    -fx-font-family: 'League Gothic';
+    -fx-font-size: 7em;
+}
+
+.background {
+
+}
+
+.label_title {
+    -fx-font-family: 'League Gothic';
+    -fx-font-size: 3em;
+}
+
+.label_info {
+    -fx-font-family: 'Open Sans';
+    -fx-font-size: 3em;
+}
+
+#contact_list_view {
+    -fx-font-family: 'League Gothic';
+    -fx-font-size: 2.5em;
+    -fx-letter-spacing: 200px;
+}

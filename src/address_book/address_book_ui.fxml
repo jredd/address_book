@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchor_main" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="address_book.Controller">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #333333;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <SplitPane dividerPositions="0.2606516290726817" VBox.vgrow="ALWAYS">
+              <items>
+                <AnchorPane maxWidth="300.0" minHeight="0.0" minWidth="150.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #3b9ccc;">
+                     <children>
+                        <ListView fx:id="contact_list_view" onMouseClicked="#list_clicked" prefHeight="468.0" prefWidth="196.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane style="-fx-background-color: #3b9ccc;">
+                     <children>
+                        <Pane fx:id="pane_view_mode" prefHeight="424.0" prefWidth="602.0" stylesheets="@styles/main.css" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label fx:id="label_full_name" layoutX="22.0" layoutY="6.0" text="Full Name" />
+                              <Label layoutX="27.0" layoutY="120.0" text="Address:">
+                                 <styleClass>
+                                    <String fx:value="title_label" />
+                                    <String fx:value="label_title" />
+                                 </styleClass></Label>
+                              <Label layoutX="27.0" layoutY="251.0" text="Phone:">
+                                 <styleClass>
+                                    <String fx:value="title_label" />
+                                    <String fx:value="label_title" />
+                                 </styleClass></Label>
+                              <Label layoutX="27.0" layoutY="338.0" text="Gender:">
+                                 <styleClass>
+                                    <String fx:value="title_label" />
+                                    <String fx:value="label_title" />
+                                 </styleClass></Label>
+                              <Label fx:id="label_address_line1" layoutX="106.0" layoutY="120.0" styleClass="label_info" text="address_line1" />
+                              <Label fx:id="label_address_line2" layoutX="105.0" layoutY="178.0" styleClass="label_info" text="address_line2" />
+                              <Label fx:id="label_phone" layoutX="102.0" layoutY="252.0" styleClass="label_info" text="phone" />
+                              <Label fx:id="label_gender" layoutX="102.0" layoutY="339.0" styleClass="label_info" text="gender" />
+                           </children>
+                        </Pane>
+                        <HBox layoutY="353.0" prefHeight="45.0" style="-fx-background-color: #333333;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0">
+                           <children>
+                              <Button fx:id="btn_edit_contact" mnemonicParsing="false" onAction="#edit_contact" text="Edit">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Region HBox.hgrow="ALWAYS" />
+                              <Button fx:id="btn_add_contact" mnemonicParsing="false" onAction="#add_contact" text="+">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
