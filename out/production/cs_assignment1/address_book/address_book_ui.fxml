@@ -4,20 +4,124 @@
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
 
-<AnchorPane fx:id="anchor_main" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="address_book.Controller">
+<AnchorPane fx:id="anchor_app_container" styleClass="background_charcoal" stylesheets="@styles/main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="address_book.Controller">
    <children>
-      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #333333;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="remove_border" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <SplitPane dividerPositions="0.2606516290726817" VBox.vgrow="ALWAYS">
+            <SplitPane dividerPositions="0.2606516290726817" styleClass="remove_border" VBox.vgrow="ALWAYS">
               <items>
-                <AnchorPane maxWidth="300.0" minHeight="0.0" minWidth="150.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #3b9ccc;">
+                <AnchorPane maxWidth="300.0" minHeight="0.0" minWidth="150.0" prefHeight="160.0" prefWidth="100.0" styleClass="remove_border">
                      <children>
-                        <ListView fx:id="contact_list_view" onMouseClicked="#list_clicked" prefHeight="468.0" prefWidth="196.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <ListView fx:id="contact_list_view" onMouseClicked="#list_clicked" prefHeight="418.0" prefWidth="196.0" styleClass="remove_border" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <HBox layoutY="418.0" prefHeight="45.0" prefWidth="200.0" styleClass="background_charcoal" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Button fx:id="btn_delete_contact" mnemonicParsing="false" onMouseClicked="#delete_contact" text="-">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Region prefHeight="200.0" prefWidth="200.0" />
+                              <Button mnemonicParsing="false" onMouseClicked="#add_contact" text="+">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
                      </children>
                   </AnchorPane>
-                <AnchorPane style="-fx-background-color: #3b9ccc;">
+                <AnchorPane styleClass="remove_border">
                      <children>
+                        <Pane fx:id="pane_input_mode" prefHeight="200.0" prefWidth="200.0" styleClass="background_blue" visible="false" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="6.0" layoutY="21.0" styleClass="label_title" text="First Name" />
+                              <Label layoutX="7.0" layoutY="86.0" styleClass="label_title" text="Address1" />
+                              <Label layoutX="7.0" layoutY="159.0" styleClass="label_title" text="Address2" />
+                              <Label layoutX="9.0" layoutY="228.0" styleClass="label_title" text="City" />
+                              <Label layoutX="13.0" layoutY="301.0" styleClass="label_title" text="Phone" />
+                              <Label layoutX="262.0" layoutY="21.0" styleClass="label_title" text="Init" />
+                              <Label layoutX="349.0" layoutY="21.0" styleClass="label_title" text="Last " />
+                              <Label layoutX="282.0" layoutY="230.0" styleClass="label_title" text="State" />
+                              <Label layoutX="451.0" layoutY="232.0" styleClass="label_title" text="Zip" />
+                              <Label layoutX="323.0" layoutY="301.0" styleClass="label_title" text="Gender" />
+                              <TextField fx:id="field_first_name" layoutX="93.0" layoutY="30.0" prefHeight="35.0" prefWidth="163.0" promptText="First Name" />
+                              <TextField fx:id="field_address1" layoutX="93.0" layoutY="93.0" prefHeight="35.0" prefWidth="465.0" promptText="Address" />
+                              <TextField fx:id="field_address2" layoutX="93.0" layoutY="168.0" prefHeight="35.0" prefWidth="465.0" promptText="Addres Line 2" />
+                              <TextField fx:id="field_city" layoutX="94.0" layoutY="237.0" prefHeight="35.0" prefWidth="178.0" promptText="City" />
+                              <TextField fx:id="field_zip" layoutX="480.0" layoutY="237.0" prefHeight="35.0" prefWidth="77.0" promptText="Zip" />
+                              <TextField fx:id="field_phone" layoutX="94.0" layoutY="307.0" prefHeight="35.0" prefWidth="221.0" promptText="Phone" />
+                              <ComboBox fx:id="combo_state" layoutX="330.0" layoutY="237.0" prefHeight="35.0" prefWidth="114.0" promptText="---">
+                                  <items>
+                                      <FXCollections fx:factory="observableArrayList">
+                                          <String fx:value="Alabama" />
+                                          <String fx:value="Alaska" />
+                                          <String fx:value="Arizona" />
+                                          <String fx:value="Arkansas" />
+                                          <String fx:value="California" />
+                                          <String fx:value="Colorado" />
+                                          <String fx:value="Connecticut" />
+                                          <String fx:value="Delaware" />
+                                          <String fx:value="District Of Columbia" />
+                                          <String fx:value="Florida" />
+                                          <String fx:value="Georgia" />
+                                          <String fx:value="Hawaii" />
+                                          <String fx:value="Idaho" />
+                                          <String fx:value="Illinois" />
+                                          <String fx:value="Indiana" />
+                                          <String fx:value="Iowa" />
+                                          <String fx:value="Kansas" />
+                                          <String fx:value="Kentucky" />
+                                          <String fx:value="Louisiana" />
+                                          <String fx:value="Maine" />
+                                          <String fx:value="Maryland" />
+                                          <String fx:value="Massachusetts" />
+                                          <String fx:value="Michigan" />
+                                          <String fx:value="Minnesota" />
+                                          <String fx:value="Mississippi" />
+                                          <String fx:value="Missouri" />
+                                          <String fx:value="Montana" />
+                                          <String fx:value="Nebraska" />
+                                          <String fx:value="Nevada" />
+                                          <String fx:value="New Hampshire" />
+                                          <String fx:value="New Jersey" />
+                                          <String fx:value="New Mexico" />
+                                          <String fx:value="New York" />
+                                          <String fx:value="North Carolina" />
+                                          <String fx:value="North Dakota" />
+                                          <String fx:value="Ohio" />
+                                          <String fx:value="Oklahoma" />
+                                          <String fx:value="Oregon" />
+                                          <String fx:value="Pennsylvania" />
+                                          <String fx:value="Rhode Island" />
+                                          <String fx:value="South Carolina" />
+                                          <String fx:value="South Dakota" />
+                                          <String fx:value="Tennessee" />
+                                          <String fx:value="Texas" />
+                                          <String fx:value="Utah" />
+                                          <String fx:value="Vermont" />
+                                          <String fx:value="Virginia" />
+                                          <String fx:value="Washington" />
+                                          <String fx:value="West Virginia" />
+                                          <String fx:value="Wisconsin" />
+                                          <String fx:value="Wyoming" />
+                                      </FXCollections>
+                                  </items>
+                              </ComboBox>
+                              <ComboBox fx:id="combo_gender" layoutX="383.0" layoutY="308.0" prefHeight="35.0" prefWidth="66.0" promptText="---">
+                                  <items>
+                                      <FXCollections fx:factory="observableArrayList">
+                                          <String fx:value="M" />
+                                          <String fx:value="F" />
+                                      </FXCollections>
+                                  </items>
+                              </ComboBox>
+
+                              <TextField fx:id="field_middle_name" layoutX="300.0" layoutY="29.0" prefHeight="35.0" prefWidth="45.0" promptText="Init" />
+                              <TextField fx:id="field_last_name" layoutX="387.0" layoutY="30.0" prefHeight="35.0" prefWidth="171.0" promptText="Last Name" />
+                           </children>
+                        </Pane>
                         <Pane fx:id="pane_view_mode" prefHeight="424.0" prefWidth="602.0" stylesheets="@styles/main.css" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <Label fx:id="label_full_name" layoutX="22.0" layoutY="6.0" text="Full Name" />
@@ -41,21 +145,34 @@
                               <Label fx:id="label_phone" layoutX="102.0" layoutY="252.0" styleClass="label_info" text="phone" />
                               <Label fx:id="label_gender" layoutX="102.0" layoutY="339.0" styleClass="label_info" text="gender" />
                            </children>
+                           <styleClass>
+                              <String fx:value="remove_border" />
+                              <String fx:value="background_blue" />
+                           </styleClass>
                         </Pane>
-                        <HBox layoutY="353.0" prefHeight="45.0" style="-fx-background-color: #333333;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0">
+                        <HBox fx:id="hbox_control_container" layoutY="353.0" prefHeight="45.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0">
                            <children>
-                              <Button fx:id="btn_edit_contact" mnemonicParsing="false" onAction="#edit_contact" text="Edit">
+                              <Label fx:id="label_validation_warning">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Region HBox.hgrow="ALWAYS" />
+                              <Button fx:id="btn_cancel_mode" disable="true" mnemonicParsing="false" onMouseClicked="#cancel_mode" text="cancel" visible="false">
                                  <HBox.margin>
                                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                  </HBox.margin>
                               </Button>
-                              <Region HBox.hgrow="ALWAYS" />
-                              <Button fx:id="btn_add_contact" mnemonicParsing="false" onAction="#add_contact" text="+">
+                              <Button fx:id="btn_control_view_mode" mnemonicParsing="false" onMouseClicked="#control_view_contact" text="Edit">
                                  <HBox.margin>
                                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                  </HBox.margin>
                               </Button>
                            </children>
+                           <styleClass>
+                              <String fx:value="background_charcoal" />
+                              <String fx:value="remove_border" />
+                           </styleClass>
                         </HBox>
                      </children>
                   </AnchorPane>

@@ -8,13 +8,30 @@
     src: url('../fonts/open_sans.ttf');
 }
 
+.background_charcoal {
+    -fx-background-color: #333;
+}
+
+.background_blue {
+    -fx-background-color: #3b9ccc;
+}
+
 #label_full_name {
     -fx-font-family: 'League Gothic';
     -fx-font-size: 7em;
+    -fx-font-spacing: 15em;
 }
 
-.background {
+.text-field {
+    -fx-text-fill: #333;
+    -fx-font-size: 1.5em;
+    -fx-font-family: 'Open Sans';
+}
 
+#label_validation_warning {
+    -fx-text-fill: #f93838;
+    -fx-font-size: 1.75em;
+    -fx-font-family: 'Open Sans';
 }
 
 .label_title {
@@ -31,4 +48,52 @@
     -fx-font-family: 'League Gothic';
     -fx-font-size: 2.5em;
     -fx-letter-spacing: 200px;
+    -fx-background-insets: 0;
+}
+
+.button {
+    -fx-padding: 5 10 5 10;
+    -fx-border-color: #fff;
+    -fx-border-width: 1;
+    -fx-background-radius: 0;
+    -fx-background-color: #333;
+    -fx-text-fill: #fff;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+
+}
+
+.button:hover {
+    -fx-background-color: #fff;
+    -fx-text-fill: #333;
+    -fx-cursor: hand;
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-border-color: #fff;
+  -fx-background-color: #333;
+  -fx-text-fill: #fff;
+}
+
+.button:focused {
+    -fx-border-color: white, white;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-insets: 0;
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
 }
