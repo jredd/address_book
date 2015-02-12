@@ -13,8 +13,8 @@
     -fx-font-size: 7em;
 }
 
-.background {
-
+#anchor_app_container {
+    -fx-background-color:  #333333;
 }
 
 .label_title {
