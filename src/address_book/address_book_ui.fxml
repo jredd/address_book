@@ -5,18 +5,18 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="anchor_main" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="address_book.Controller">
+<AnchorPane fx:id="anchor_app_container" stylesheets="@styles/main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="address_book.Controller">
    <children>
-      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #333333;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <SplitPane dividerPositions="0.2606516290726817" VBox.vgrow="ALWAYS">
               <items>
-                <AnchorPane maxWidth="300.0" minHeight="0.0" minWidth="150.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #3b9ccc;">
+                <AnchorPane maxWidth="300.0" minHeight="0.0" minWidth="150.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
                         <ListView fx:id="contact_list_view" onMouseClicked="#list_clicked" prefHeight="468.0" prefWidth="196.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                      </children>
                   </AnchorPane>
-                <AnchorPane style="-fx-background-color: #3b9ccc;">
+                <AnchorPane>
                      <children>
                         <Pane fx:id="pane_view_mode" prefHeight="424.0" prefWidth="602.0" stylesheets="@styles/main.css" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
@@ -42,7 +42,7 @@
                               <Label fx:id="label_gender" layoutX="102.0" layoutY="339.0" styleClass="label_info" text="gender" />
                            </children>
                         </Pane>
-                        <HBox layoutY="353.0" prefHeight="45.0" style="-fx-background-color: #333333;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0">
+                        <HBox layoutY="353.0" prefHeight="45.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0">
                            <children>
                               <Button fx:id="btn_edit_contact" mnemonicParsing="false" onAction="#edit_contact" text="Edit">
                                  <HBox.margin>

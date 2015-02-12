@@ -3,6 +3,8 @@ package address_book;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.control.ListView;
 import javafx.fxml.Initializable;
 import javafx.event.ActionEvent;
@@ -27,7 +29,7 @@ public class Controller implements Initializable {
     @FXML
     private Pane pane_edit_mode;
     @FXML
-    private Pane pane_view_mode;
+    private AnchorPane anchor_app_container;
     @FXML
     private Button btn_edit_contact;
     @FXML
