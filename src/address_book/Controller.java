@@ -5,38 +5,24 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ComboBox;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.control.ListView;
 import javafx.fxml.Initializable;
-import javafx.event.ActionEvent;
 import javafx.collections.ObservableList;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.KeyEvent;
 import javafx.event.EventHandler;
-//import javafx.add;
-//import java.xm
-//import javax.xml.soap.Node;
 import javafx.scene.Node;
 
-
-import java.awt.*;
-import java.io.IOException;
-import java.io.FileOutputStream;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.io.InputStream;
-
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.net.URL;
 import java.util.*;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
-
 
 
 public class Controller implements Initializable {
