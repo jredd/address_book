@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/cs_assignment1/address_book/Controller.class" afterPath="$PROJECT_DIR$/out/production/cs_assignment1/address_book/Controller.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/cs_assignment1/address_book/Main.class" afterPath="$PROJECT_DIR$/out/production/cs_assignment1/address_book/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/address_book/Controller.java" afterPath="$PROJECT_DIR$/src/address_book/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/cs_assignment1/address_book/address_book_ui.fxml" afterPath="$PROJECT_DIR$/out/production/cs_assignment1/address_book/address_book_ui.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/address_book/address_book_ui.fxml" afterPath="$PROJECT_DIR$/src/address_book/address_book_ui.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/address_book/Main.java" afterPath="$PROJECT_DIR$/src/address_book/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/cs_assignment1/address_book/styles/main.css" afterPath="$PROJECT_DIR$/out/production/cs_assignment1/address_book/styles/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -69,11 +69,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/address_book/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="48" max-vertical-offset="726">
-              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.7138643" vertical-offset="0" max-vertical-offset="682">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,10 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/address_book/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8110599" vertical-offset="0" max-vertical-offset="6622">
+            <state vertical-scroll-proportion="-19.555555" vertical-offset="0" max-vertical-offset="6622">
               <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -128,9 +128,9 @@
         <option value="$PROJECT_DIR$/src/address_book/contacts.txt" />
         <option value="$PROJECT_DIR$/src/address_book/address_book_ui.fxml" />
         <option value="$PROJECT_DIR$/out/production/cs_assignment1/address_book/contacts.txt" />
-        <option value="$PROJECT_DIR$/src/address_book/Main.java" />
         <option value="$PROJECT_DIR$/src/address_book/styles/main.css" />
         <option value="$PROJECT_DIR$/src/address_book/Controller.java" />
+        <option value="$PROJECT_DIR$/src/address_book/Main.java" />
       </list>
     </option>
   </component>
@@ -451,7 +451,13 @@
       <option name="project" value="LOCAL" />
       <updated>1423805966748</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="cleaneded up controller imports and fixed a visibility issue on a pane in the xml file">
+      <created>1423806362962</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1423806362962</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -479,7 +485,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12083333" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12083333" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26304802" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -508,7 +514,8 @@
     </option>
     <MESSAGE value="many changes close to finalizign core functionality. Only a few more things left. Still need tos etup the input restrictions though" />
     <MESSAGE value="finished up all requirements for class i believe" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished up all requirements for class i believe" />
+    <MESSAGE value="cleaneded up controller imports and fixed a visibility issue on a pane in the xml file" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaneded up controller imports and fixed a visibility issue on a pane in the xml file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -728,16 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/address_book/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="48" max-vertical-offset="726">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/address_book/address_book_ui.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.1323308" vertical-offset="1645" max-vertical-offset="4158">
@@ -748,7 +745,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/address_book/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8110599" vertical-offset="0" max-vertical-offset="6622">
+        <state vertical-scroll-proportion="-19.555555" vertical-offset="0" max-vertical-offset="6622">
           <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -768,6 +765,16 @@
             <element signature="method#save_contacts_to_file#0;class#Controller#0" expanded="false" />
             <element signature="method#add_contact#1;class#Controller#0" expanded="false" />
             <element signature="e#16790#16805#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/address_book/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7138643" vertical-offset="0" max-vertical-offset="682">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
