@@ -14,6 +14,8 @@ import javafx.collections.ObservableList;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.input.KeyEvent;
+//import javafx.scene.input.EventH;
 //import java.xm
 //import javax.xml.soap.Node;
 import javafx.scene.Node;
@@ -433,6 +435,24 @@ public class Controller implements Initializable {
         }
     }
 
+//    @FXML
+//    public EventHandler<KeyEvent> maxLength(final Integer i) {
+//        return new EventHandler<KeyEvent>() {
+//
+//            @Override
+//            public void handle(KeyEvent arg0) {
+//
+//                TextField tx = (TextField) arg0.getSource();
+//                if (tx.getText().length() >= i) {
+//                    arg0.consume();
+//                }
+//
+//            }
+//
+//        };
+//
+//    }
+
     public void control_view_contact(MouseEvent Event) {
         System.out.println("The current mode is "+current_mode);
         // Set the UI properties based on the current view.
@@ -454,7 +474,6 @@ public class Controller implements Initializable {
                 toggle_input_pane(false);
             }
         }else if (current_mode.equals("add")) {
-
             if (validate_fields()) {
                 if (check_if_contact_does_not_exists()) {
                     btn_control_view_mode.setText("Edit");
@@ -469,19 +488,19 @@ public class Controller implements Initializable {
                     add_contact(new_contact);
 
                     // Add new contact to contacts model abd rebuild the contacts list view.
-
                     String name = build_name(new_contact);
                     contacts.put(name, new_contact);
                     load_contacts_to_list_view();
                     set_contact_view_information(new_contact);
-//                    contact_list_view.getItems().s
-//                    for (Object entry : contact_list_view.getItems() ) {
-//                        String entryText = name;
-//                    }
-//                    contacts.;
-//                    contacts.get(name);
-//                    contact_list_view.getSelectionModel().getSelectedItem(name);
-//                    contact_list_view.getFocusModel().focus(index);
+                    int index = 0;
+                    // Iterate over new view list and find the index of the new contact and set
+                    for (Object entry : contact_list_view.getItems() ) {
+                        System.out.println(entry);
+                        if (entry.equals(name)) {
+                           set_list_view_selection(index);
+                        }
+                        index +=1;
+                    }
 
                 }
             }

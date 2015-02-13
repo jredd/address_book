@@ -45,7 +45,7 @@
 }
 
 #contact_list_view {
-    -fx-font-family: 'League Gothic';
+    -fx-font-family: 'Open Sans';
     -fx-font-size: 2.5em;
     -fx-letter-spacing: 200px;
     -fx-background-insets: 0;
@@ -58,8 +58,8 @@
     -fx-background-radius: 0;
     -fx-background-color: #333;
     -fx-text-fill: #fff;
-    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-    -fx-font-size: 11pt;
+    -fx-font-family: "Open Sans";
+    -fx-font-size: 1.25em;
 
     -fx-background-insets: 0 0 0 0, 0, 1, 2;
 
