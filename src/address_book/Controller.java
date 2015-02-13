@@ -15,7 +15,8 @@ import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.KeyEvent;
-//import javafx.scene.input.EventH;
+import javafx.event.EventHandler;
+//import javafx.add;
 //import java.xm
 //import javax.xml.soap.Node;
 import javafx.scene.Node;
@@ -84,22 +85,47 @@ public class Controller implements Initializable {
     private ComboBox combo_gender;
     @FXML
     private ListView<String> contact_list_view;
-
+    private boolean is_data_available=false;
     private List current_selection;
     private String current_mode = "view";
 
     private final HashMap<String, List<Comparable<?>>> contacts = new HashMap();
 
+    public EventHandler<KeyEvent> maxLength(final Integer i) {
+        return new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent arg0) {
+                TextField tx = (TextField) arg0.getSource();
+                if (tx.getText().length() >= i) {
+                    arg0.consume();
+                }
+            }
+        };
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        System.out.println("Initializing Application and setting things");
+//        System.out.println("Initializing Application and setting things");
 
         load_data();
-        load_contacts_to_list_view();
+        // Make sure there was actual data before setting up the rest of the ui
+        if (is_data_available) {
+            load_contacts_to_list_view();
+            toggle_view_pane(true);
+            // Set the first contact in the list to the contact view
+            int index = contact_list_view.getSelectionModel().getSelectedIndex()+1;
+            set_list_view_selection(index);
+        }
 
-        // Set the first contact in the list to the contact view
-        int index = contact_list_view.getSelectionModel().getSelectedIndex()+1;
-        set_list_view_selection(index);
+
+        field_first_name.addEventFilter(KeyEvent.KEY_TYPED, maxLength(20));
+        field_last_name.addEventFilter(KeyEvent.KEY_TYPED, maxLength(20));
+        field_middle_name.addEventFilter(KeyEvent.KEY_TYPED, maxLength(1));
+        field_address1.addEventFilter(KeyEvent.KEY_TYPED, maxLength(35));
+        field_address2.addEventFilter(KeyEvent.KEY_TYPED, maxLength(35));
+        field_city.addEventFilter(KeyEvent.KEY_TYPED, maxLength(25));
+        field_zip.addEventFilter(KeyEvent.KEY_TYPED, maxLength(9));
+        field_phone.addEventFilter(KeyEvent.KEY_TYPED, maxLength(21));
     }
 
     public void load_data() {
@@ -112,6 +138,9 @@ public class Controller implements Initializable {
                 List<String> contact = Arrays.asList(line.split("     "));
                 String name = build_name(contact);
                 contacts.put(name, new ArrayList<Comparable<?>>(contact));
+            }
+            if (contacts.size() > 0) {
+                is_data_available = true;
             }
 
         } catch (Exception e) {
@@ -171,7 +200,7 @@ public class Controller implements Initializable {
         label_gender.setText(""+contact.get(9));
     }
 
-    public void clear_text_fields() {
+    public void clear_fields() {
         field_first_name.clear();
         field_last_name.clear();
         field_middle_name.clear();
@@ -181,8 +210,8 @@ public class Controller implements Initializable {
         field_city.clear();
         field_zip.clear();
         field_phone.clear();
-        combo_state.setPromptText("---");
-        combo_gender.setPromptText("---");
+        combo_state.getSelectionModel().select(null);
+        combo_gender.getSelectionModel().select(null);
     }
 
     public void list_clicked(MouseEvent event) {
@@ -195,10 +224,8 @@ public class Controller implements Initializable {
         }
         current_selection = contact;
         if (current_mode.equals("view")) {
-            System.out.println("turtles");
             set_contact_view_information(contact);
         }else {
-            System.out.println("asdklfhj");
             set_edit_view();
             btn_control_view_mode.setText("Edit");
             current_mode = "view";
@@ -210,13 +237,13 @@ public class Controller implements Initializable {
     }
 
     public void add_contact(MouseEvent Event) {
-        System.out.println("Add contact clicked");
+//        System.out.println("Add contact clicked");
         btn_control_view_mode.setText("Done");
         current_mode = "add";
         toggle_cancel_btn(true);
         toggle_view_pane(false);
         toggle_input_pane(true);
-        clear_text_fields();
+        clear_fields();
     }
 
     public void set_list_view_selection(int index){
@@ -224,12 +251,11 @@ public class Controller implements Initializable {
         contact_list_view.getFocusModel().focus(index);
         contact_list_view.scrollTo(index);
         List<Comparable<?>> new_current_contact = contacts.get(contact_list_view.getSelectionModel().getSelectedItem());
-        System.out.println(new_current_contact);
         set_contact_view_information(contacts.get(build_name(new_current_contact)));
     }
 
     public void delete_contact(MouseEvent Event) {
-        System.out.println("delete contact btn clicked");
+//        System.out.println("delete contact btn clicked");
         List<Comparable<?>> current_contact = contacts.get(contact_list_view.getSelectionModel().getSelectedItem());
         String name_key = build_name(current_contact);
         contacts.remove(name_key);
@@ -270,22 +296,21 @@ public class Controller implements Initializable {
     }
 
     public void cancel_mode(MouseEvent Event) {
-        System.out.println("cancel mode btn clicked");
+//        System.out.println("cancel mode btn clicked");
         toggle_cancel_btn(false);
         toggle_view_pane(true);
         toggle_input_pane(false);
+        label_validation_warning.setText(null);
         btn_control_view_mode.setText("Edit");
-
         current_mode = "view";
+        clear_fields();
     }
 
     public void set_edit_view() {
         List<Comparable<?>> contact = contacts.get(contact_list_view.getSelectionModel().getSelectedItem());
-        System.out.println(contact);
 
         String name_middle = ""+contact.get(2);
         String address2 = ""+contact.get(4);
-
         field_first_name.setText(""+contact.get(0));
         field_last_name.setText(""+contact.get(1));
         if (!name_middle.equals("None")) {
@@ -337,12 +362,10 @@ public class Controller implements Initializable {
     public List<Comparable<?>> get_text_field_content(List<Comparable<?>> contact) {
         String name_middle = ""+field_middle_name.getText();
         String address2 = ""+field_address2.getText();
-        System.out.println(contact);
 
         contact.set(0, field_first_name.getText());
         contact.set(1, field_last_name.getText());
         if (name_middle.length() == 0) {
-            System.out.println("here is the middle name -"+name_middle);
             contact.set(2, "None");
         } else {
             contact.set(2, name_middle);
@@ -367,7 +390,6 @@ public class Controller implements Initializable {
         get_text_field_content(current_contact);
 
         // Set the local data with the new information
-        System.out.println(contacts);
         set_contact_view_information(current_contact);
     }
 
@@ -435,26 +457,8 @@ public class Controller implements Initializable {
         }
     }
 
-//    @FXML
-//    public EventHandler<KeyEvent> maxLength(final Integer i) {
-//        return new EventHandler<KeyEvent>() {
-//
-//            @Override
-//            public void handle(KeyEvent arg0) {
-//
-//                TextField tx = (TextField) arg0.getSource();
-//                if (tx.getText().length() >= i) {
-//                    arg0.consume();
-//                }
-//
-//            }
-//
-//        };
-//
-//    }
-
     public void control_view_contact(MouseEvent Event) {
-        System.out.println("The current mode is "+current_mode);
+//        System.out.println("The current mode is "+current_mode);
         // Set the UI properties based on the current view.
         if (current_mode.equals("view")) {
             btn_control_view_mode.setText("Done");
@@ -495,7 +499,7 @@ public class Controller implements Initializable {
                     int index = 0;
                     // Iterate over new view list and find the index of the new contact and set
                     for (Object entry : contact_list_view.getItems() ) {
-                        System.out.println(entry);
+//                        System.out.println(entry);
                         if (entry.equals(name)) {
                            set_list_view_selection(index);
                         }

@@ -13,7 +13,7 @@ public class Main extends Application {
     public void start(Stage primary_stage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("address_book_ui.fxml"));
         primary_stage.setTitle("Address Book");
-        scene = new Scene(root, 800, 500);
+        scene = new Scene(root, 800, 450);
         primary_stage.setScene(scene);
 
         String css = Main.class.getResource("styles/main.css").toExternalForm();

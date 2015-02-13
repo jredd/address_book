@@ -46,13 +46,13 @@
 
 #contact_list_view {
     -fx-font-family: 'Open Sans';
-    -fx-font-size: 2.5em;
+    -fx-font-size: 1.75em;
     -fx-letter-spacing: 200px;
     -fx-background-insets: 0;
 }
 
 .button {
-    -fx-padding: 5 10 5 10;
+    -fx-padding: 5 12 5 12;
     -fx-border-color: #fff;
     -fx-border-width: 1;
     -fx-background-radius: 0;

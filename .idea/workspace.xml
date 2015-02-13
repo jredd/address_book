@@ -4,12 +4,11 @@
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/cs_assignment1/address_book/Controller.class" afterPath="$PROJECT_DIR$/out/production/cs_assignment1/address_book/Controller.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/address_book/Controller.java" afterPath="$PROJECT_DIR$/src/address_book/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/cs_assignment1/address_book/address_book_ui.fxml" afterPath="$PROJECT_DIR$/out/production/cs_assignment1/address_book/address_book_ui.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/address_book/Main.java" afterPath="$PROJECT_DIR$/src/address_book/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/address_book/address_book_ui.fxml" afterPath="$PROJECT_DIR$/src/address_book/address_book_ui.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/address_book/contacts.txt" afterPath="$PROJECT_DIR$/src/address_book/contacts.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/cs_assignment1/address_book/contacts.txt" afterPath="$PROJECT_DIR$/out/production/cs_assignment1/address_book/contacts.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/cs_assignment1/address_book/styles/main.css" afterPath="$PROJECT_DIR$/out/production/cs_assignment1/address_book/styles/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/address_book/styles/main.css" afterPath="$PROJECT_DIR$/src/address_book/styles/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -72,33 +71,44 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6516588">
+    <splitter split-orientation="horizontal" split-proportion="0.5242891">
       <split-first>
         <leaf>
-          <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/address_book/Controller.java">
+          <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/address_book/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.51724136" vertical-offset="4532" max-vertical-offset="5280">
-                  <caret line="477" column="52" selection-start-line="477" selection-start-column="52" selection-end-line="477" selection-end-column="52" />
+                <state vertical-scroll-proportion="0.40451127" vertical-offset="61" max-vertical-offset="726">
+                  <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/address_book/Controller.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-111.40741" vertical-offset="270" max-vertical-offset="6930">
+                  <caret line="213" column="53" selection-start-line="213" selection-start-column="53" selection-end-line="213" selection-end-column="53" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#2413#2702#0" expanded="true" />
+                    <element signature="e#2701#2702#0" expanded="true" />
                     <element signature="method#load_data#0;class#Controller#0" expanded="false" />
+                    <element signature="method#load_contacts_to_list_view#0;class#Controller#0" expanded="false" />
                     <element signature="method#build_name#0;class#Controller#0" expanded="false" />
                     <element signature="method#set_contact_view_information#0;class#Controller#0" expanded="false" />
-                    <element signature="method#clear_text_fields#0;class#Controller#0" expanded="false" />
-                    <element signature="method#list_clicked#0;class#Controller#0" expanded="false" />
+                    <element signature="method#delete_contact#0;class#Controller#0" expanded="false" />
                     <element signature="method#toggle_cancel_btn#0;class#Controller#0" expanded="false" />
                     <element signature="method#toggle_view_pane#0;class#Controller#0" expanded="false" />
                     <element signature="method#toggle_input_pane#0;class#Controller#0" expanded="false" />
-                    <element signature="method#cancel_mode#0;class#Controller#0" expanded="false" />
                     <element signature="method#set_edit_view#0;class#Controller#0" expanded="false" />
                     <element signature="method#validate_fields#0;class#Controller#0" expanded="false" />
-                    <element signature="method#get_text_field_content#0;class#Controller#0" expanded="false" />
-                    <element signature="method#update_contact#0;class#Controller#0" expanded="false" />
                     <element signature="method#check_if_contact_does_not_exists#0;class#Controller#0" expanded="false" />
                     <element signature="method#save_contacts_to_file#0;class#Controller#0" expanded="false" />
                     <element signature="method#add_contact#1;class#Controller#0" expanded="false" />
-                    <element signature="e#15965#15980#0" expanded="true" />
+                    <element signature="e#17103#17118#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -107,8 +117,8 @@
           <file leaf-file-name="address_book_ui.fxml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/address_book/address_book_ui.fxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="3493" max-vertical-offset="4246">
-                  <caret line="54" column="95" selection-start-line="54" selection-start-column="95" selection-end-line="54" selection-end-column="95" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="1711" max-vertical-offset="4224">
+                  <caret line="112" column="54" selection-start-line="112" selection-start-column="54" selection-end-line="112" selection-end-column="54" />
                   <folding />
                 </state>
               </provider>
@@ -128,21 +138,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="contacts.txt" pinned="false" current-in-tab="true">
+          <file leaf-file-name="contacts.txt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/out/production/cs_assignment1/address_book/contacts.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.29774436" vertical-offset="0" max-vertical-offset="665">
-                  <caret line="9" column="116" selection-start-line="9" selection-start-column="116" selection-end-line="9" selection-end-column="116" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="352">
+                  <caret line="4" column="74" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+          <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/address_book/styles/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="308" max-vertical-offset="2288">
-                  <caret line="30" column="25" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="25" />
+                <state vertical-scroll-proportion="0.2580645" vertical-offset="1020" max-vertical-offset="2288">
+                  <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
                   <folding />
                 </state>
               </provider>
@@ -166,12 +176,12 @@
         <option value="$PROJECT_DIR$/src/address_book/book_information.xsd" />
         <option value="$PROJECT_DIR$/src/address_book/contact_information.xsd" />
         <option value="$PROJECT_DIR$/src/address_book/contact_list.xlm" />
-        <option value="$PROJECT_DIR$/src/address_book/Main.java" />
-        <option value="$PROJECT_DIR$/src/address_book/address_book_ui.fxml" />
         <option value="$PROJECT_DIR$/src/address_book/contacts.txt" />
-        <option value="$PROJECT_DIR$/src/address_book/styles/main.css" />
+        <option value="$PROJECT_DIR$/src/address_book/address_book_ui.fxml" />
         <option value="$PROJECT_DIR$/out/production/cs_assignment1/address_book/contacts.txt" />
         <option value="$PROJECT_DIR$/src/address_book/Controller.java" />
+        <option value="$PROJECT_DIR$/src/address_book/Main.java" />
+        <option value="$PROJECT_DIR$/src/address_book/styles/main.css" />
       </list>
     </option>
   </component>
@@ -265,54 +275,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="styles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cs_assignment1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cs_assignment1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="address_book" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fonts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cs_assignment1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cs_assignment1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="production" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cs_assignment1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="address_book" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -550,6 +512,13 @@
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
     </task>
+    <task id="LOCAL-00001" summary="many changes close to finalizign core functionality. Only a few more things left. Still need tos etup the input restrictions though">
+      <created>1423781437019</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1423781437019</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -604,10 +573,12 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="many changes close to finalizign core functionality. Only a few more things left. Still need tos etup the input restrictions though" />
+    <option name="LAST_COMMIT_MESSAGE" value="many changes close to finalizign core functionality. Only a few more things left. Still need tos etup the input restrictions though" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -632,23 +603,22 @@
           <caret line="136" column="8" selection-start-line="136" selection-start-column="8" selection-end-line="136" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2413#2702#0" expanded="true" />
+            <element signature="e#2701#2702#0" expanded="true" />
             <element signature="method#load_data#0;class#Controller#0" expanded="false" />
+            <element signature="method#load_contacts_to_list_view#0;class#Controller#0" expanded="false" />
             <element signature="method#build_name#0;class#Controller#0" expanded="false" />
             <element signature="method#set_contact_view_information#0;class#Controller#0" expanded="false" />
-            <element signature="method#clear_text_fields#0;class#Controller#0" expanded="false" />
-            <element signature="method#list_clicked#0;class#Controller#0" expanded="false" />
+            <element signature="method#delete_contact#0;class#Controller#0" expanded="false" />
             <element signature="method#toggle_cancel_btn#0;class#Controller#0" expanded="false" />
             <element signature="method#toggle_view_pane#0;class#Controller#0" expanded="false" />
             <element signature="method#toggle_input_pane#0;class#Controller#0" expanded="false" />
-            <element signature="method#cancel_mode#0;class#Controller#0" expanded="false" />
             <element signature="method#set_edit_view#0;class#Controller#0" expanded="false" />
             <element signature="method#validate_fields#0;class#Controller#0" expanded="false" />
-            <element signature="method#get_text_field_content#0;class#Controller#0" expanded="false" />
-            <element signature="method#update_contact#0;class#Controller#0" expanded="false" />
             <element signature="method#check_if_contact_does_not_exists#0;class#Controller#0" expanded="false" />
             <element signature="method#save_contacts_to_file#0;class#Controller#0" expanded="false" />
             <element signature="method#add_contact#1;class#Controller#0" expanded="false" />
-            <element signature="e#15965#15980#0" expanded="true" />
+            <element signature="e#17103#17118#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -685,23 +655,22 @@
           <caret line="136" column="8" selection-start-line="136" selection-start-column="8" selection-end-line="136" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2413#2702#0" expanded="true" />
+            <element signature="e#2701#2702#0" expanded="true" />
             <element signature="method#load_data#0;class#Controller#0" expanded="false" />
+            <element signature="method#load_contacts_to_list_view#0;class#Controller#0" expanded="false" />
             <element signature="method#build_name#0;class#Controller#0" expanded="false" />
             <element signature="method#set_contact_view_information#0;class#Controller#0" expanded="false" />
-            <element signature="method#clear_text_fields#0;class#Controller#0" expanded="false" />
-            <element signature="method#list_clicked#0;class#Controller#0" expanded="false" />
+            <element signature="method#delete_contact#0;class#Controller#0" expanded="false" />
             <element signature="method#toggle_cancel_btn#0;class#Controller#0" expanded="false" />
             <element signature="method#toggle_view_pane#0;class#Controller#0" expanded="false" />
             <element signature="method#toggle_input_pane#0;class#Controller#0" expanded="false" />
-            <element signature="method#cancel_mode#0;class#Controller#0" expanded="false" />
             <element signature="method#set_edit_view#0;class#Controller#0" expanded="false" />
             <element signature="method#validate_fields#0;class#Controller#0" expanded="false" />
-            <element signature="method#get_text_field_content#0;class#Controller#0" expanded="false" />
-            <element signature="method#update_contact#0;class#Controller#0" expanded="false" />
             <element signature="method#check_if_contact_does_not_exists#0;class#Controller#0" expanded="false" />
             <element signature="method#save_contacts_to_file#0;class#Controller#0" expanded="false" />
             <element signature="method#add_contact#1;class#Controller#0" expanded="false" />
-            <element signature="e#15965#15980#0" expanded="true" />
+            <element signature="e#17103#17118#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -738,23 +707,22 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2413#2702#0" expanded="true" />
+            <element signature="e#2701#2702#0" expanded="true" />
             <element signature="method#load_data#0;class#Controller#0" expanded="false" />
+            <element signature="method#load_contacts_to_list_view#0;class#Controller#0" expanded="false" />
             <element signature="method#build_name#0;class#Controller#0" expanded="false" />
             <element signature="method#set_contact_view_information#0;class#Controller#0" expanded="false" />
-            <element signature="method#clear_text_fields#0;class#Controller#0" expanded="false" />
-            <element signature="method#list_clicked#0;class#Controller#0" expanded="false" />
+            <element signature="method#delete_contact#0;class#Controller#0" expanded="false" />
             <element signature="method#toggle_cancel_btn#0;class#Controller#0" expanded="false" />
             <element signature="method#toggle_view_pane#0;class#Controller#0" expanded="false" />
             <element signature="method#toggle_input_pane#0;class#Controller#0" expanded="false" />
-            <element signature="method#cancel_mode#0;class#Controller#0" expanded="false" />
             <element signature="method#set_edit_view#0;class#Controller#0" expanded="false" />
             <element signature="method#validate_fields#0;class#Controller#0" expanded="false" />
-            <element signature="method#get_text_field_content#0;class#Controller#0" expanded="false" />
-            <element signature="method#update_contact#0;class#Controller#0" expanded="false" />
             <element signature="method#check_if_contact_does_not_exists#0;class#Controller#0" expanded="false" />
             <element signature="method#save_contacts_to_file#0;class#Controller#0" expanded="false" />
             <element signature="method#add_contact#1;class#Controller#0" expanded="false" />
-            <element signature="e#15965#15980#0" expanded="true" />
+            <element signature="e#17103#17118#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -775,23 +743,22 @@
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2413#2702#0" expanded="true" />
+            <element signature="e#2701#2702#0" expanded="true" />
             <element signature="method#load_data#0;class#Controller#0" expanded="false" />
+            <element signature="method#load_contacts_to_list_view#0;class#Controller#0" expanded="false" />
             <element signature="method#build_name#0;class#Controller#0" expanded="false" />
             <element signature="method#set_contact_view_information#0;class#Controller#0" expanded="false" />
-            <element signature="method#clear_text_fields#0;class#Controller#0" expanded="false" />
-            <element signature="method#list_clicked#0;class#Controller#0" expanded="false" />
+            <element signature="method#delete_contact#0;class#Controller#0" expanded="false" />
             <element signature="method#toggle_cancel_btn#0;class#Controller#0" expanded="false" />
             <element signature="method#toggle_view_pane#0;class#Controller#0" expanded="false" />
             <element signature="method#toggle_input_pane#0;class#Controller#0" expanded="false" />
-            <element signature="method#cancel_mode#0;class#Controller#0" expanded="false" />
             <element signature="method#set_edit_view#0;class#Controller#0" expanded="false" />
             <element signature="method#validate_fields#0;class#Controller#0" expanded="false" />
-            <element signature="method#get_text_field_content#0;class#Controller#0" expanded="false" />
-            <element signature="method#update_contact#0;class#Controller#0" expanded="false" />
             <element signature="method#check_if_contact_does_not_exists#0;class#Controller#0" expanded="false" />
             <element signature="method#save_contacts_to_file#0;class#Controller#0" expanded="false" />
             <element signature="method#add_contact#1;class#Controller#0" expanded="false" />
-            <element signature="e#15965#15980#0" expanded="true" />
+            <element signature="e#17103#17118#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -803,24 +770,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/address_book/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="96" max-vertical-offset="726">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/address_book/address_book_ui.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3493" max-vertical-offset="4246">
-          <caret line="54" column="95" selection-start-line="54" selection-start-column="95" selection-end-line="54" selection-end-column="95" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/address_book/contacts.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
@@ -829,46 +778,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/address_book/styles/main.css">
+    <entry file="file://$PROJECT_DIR$/src/address_book/address_book_ui.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="308" max-vertical-offset="2288">
-          <caret line="30" column="25" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1711" max-vertical-offset="4224">
+          <caret line="112" column="54" selection-start-line="112" selection-start-column="54" selection-end-line="112" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/out/production/cs_assignment1/address_book/contacts.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29774436" vertical-offset="0" max-vertical-offset="665">
-          <caret line="9" column="116" selection-start-line="9" selection-start-column="116" selection-end-line="9" selection-end-column="116" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="352">
+          <caret line="4" column="74" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/address_book/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51724136" vertical-offset="4532" max-vertical-offset="5280">
-          <caret line="477" column="52" selection-start-line="477" selection-start-column="52" selection-end-line="477" selection-end-column="52" />
+        <state vertical-scroll-proportion="-111.40741" vertical-offset="270" max-vertical-offset="6930">
+          <caret line="213" column="53" selection-start-line="213" selection-start-column="53" selection-end-line="213" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2413#2702#0" expanded="true" />
+            <element signature="e#2701#2702#0" expanded="true" />
             <element signature="method#load_data#0;class#Controller#0" expanded="false" />
+            <element signature="method#load_contacts_to_list_view#0;class#Controller#0" expanded="false" />
             <element signature="method#build_name#0;class#Controller#0" expanded="false" />
             <element signature="method#set_contact_view_information#0;class#Controller#0" expanded="false" />
-            <element signature="method#clear_text_fields#0;class#Controller#0" expanded="false" />
-            <element signature="method#list_clicked#0;class#Controller#0" expanded="false" />
+            <element signature="method#delete_contact#0;class#Controller#0" expanded="false" />
             <element signature="method#toggle_cancel_btn#0;class#Controller#0" expanded="false" />
             <element signature="method#toggle_view_pane#0;class#Controller#0" expanded="false" />
             <element signature="method#toggle_input_pane#0;class#Controller#0" expanded="false" />
-            <element signature="method#cancel_mode#0;class#Controller#0" expanded="false" />
             <element signature="method#set_edit_view#0;class#Controller#0" expanded="false" />
             <element signature="method#validate_fields#0;class#Controller#0" expanded="false" />
-            <element signature="method#get_text_field_content#0;class#Controller#0" expanded="false" />
-            <element signature="method#update_contact#0;class#Controller#0" expanded="false" />
             <element signature="method#check_if_contact_does_not_exists#0;class#Controller#0" expanded="false" />
             <element signature="method#save_contacts_to_file#0;class#Controller#0" expanded="false" />
             <element signature="method#add_contact#1;class#Controller#0" expanded="false" />
-            <element signature="e#15965#15980#0" expanded="true" />
+            <element signature="e#17103#17118#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/address_book/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40451127" vertical-offset="61" max-vertical-offset="726">
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/address_book/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2580645" vertical-offset="1020" max-vertical-offset="2288">
+          <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
